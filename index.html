@@ -1,73 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 기본 메타데이터 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 검색엔진 최적화 메타데이터 -->
-    <meta name="description" content="Welcome to My Gradient Website! Explore our amazing services including web design, web development, and creative marketing strategies. Contact us today!">
-    <meta name="keywords" content="web design, web development, creative marketing, SEO optimization, gradient website, responsive design">
-    <meta name="author" content="Your Name">
-    <meta name="robots" content="index, follow">
-
-    <!-- 소셜 미디어 메타데이터 (Open Graph) -->
-    <meta property="og:title" content="My Gradient Website">
-    <meta property="og:description" content="Explore our services and get in touch to elevate your web presence.">
-    <meta property="og:image" content="https://example.com/your-image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:type" content="website">
-
-    <!-- 트위터 카드 -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Gradient Website">
-    <meta name="twitter:description" content="Explore our services including web design, development, and marketing.">
-    <meta name="twitter:image" content="https://example.com/your-image.jpg">
-
-    <title>My Gradient Website - Web Design, Development & SEO</title>
-
+    <title>회사 웹사이트</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 헤더 -->
     <header>
-        <h1>My Gradient Website</h1>
+        <div class="logo">
+            <a href="#" onclick="location.reload();">
+                <img src="company-logo.png" alt="회사 로고">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown('intro-dropdown')">회사소개</a>
+                    <ul id="intro-dropdown" class="dropdown-content">
+                        <li><a href="#">my회사소개</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">핵심역량</a></li>
+                        <li><a href="#">주요고객사</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">사업영역</a></li>
+                <li><a href="#">홍보센터</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">견적문의</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- 네비게이션 -->
-    <div class="section-links">
-        <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('about')">About</a>
-        <a href="#" onclick="showSection('services')">Services</a>
-        <a href="#" onclick="showSection('contact')">Contact Us</a>
-    </div>
-
-    <!-- 섹션들 -->
+    <!-- 메인 콘텐츠 -->
     <main>
-        <section id="home" class="content active">
-            <h2>Welcome to Home</h2>
-            <p>Explore the beauty of gradients and styled sections here!</p>
-        </section>
-
-        <section id="about" class="content">
-            <h2>About Us</h2>
-            <p>We are passionate about delivering amazing web experiences.</p>
-        </section>
-
-        <section id="services" class="content">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Creative Design</li>
-                <li>Web Development</li>
-                <li>Marketing Strategies</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="content">
-            <h2>Contact Us</h2>
-            <p>Email: contact@gradientweb.com</p>
-            <p>Phone: +123 456 7890</p>
-        </section>
+        <div class="video-container">
+            <video controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </main>
 
     <script src="scripts.js"></script>
