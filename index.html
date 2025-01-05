@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Page</title>
+    <title>Interactive Web Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 헤더 섹션 -->
+    <!-- 헤더 -->
     <header>
-        <div class="container">
-            <h1>My Awesome Website</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showContent('home')">Home</a></li>
+                <li><a href="#" onclick="showContent('about')">About</a></li>
+                <li><a href="#" onclick="showContent('services')">Services</a></li>
+                <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- 메인 콘텐츠 -->
+    <!-- 메인 콘텐츠 영역 -->
     <main>
-        <section id="home">
-            <h2>Welcome to My Page</h2>
-            <p>This is a sample webpage with a header, footer, and navigation links.</p>
+        <section id="home" class="content active">
+            <h1>Welcome to Home</h1>
+            <p>This is the home section. Click other tabs to explore!</p>
         </section>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We provide amazing web development services.</p>
+        <section id="about" class="content">
+            <h1>About Us</h1>
+            <p>We are passionate about creating amazing web experiences.</p>
         </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
+        <section id="services" class="content">
+            <h1>Our Services</h1>
             <ul>
                 <li>Web Design</li>
                 <li>Web Development</li>
@@ -43,15 +40,14 @@
             </ul>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: contact@myawesomewebsite.com</p>
+        <section id="contact" class="content">
+            <h1>Contact Us</h1>
+            <p>Email: contact@awesomeweb.com</p>
+            <p>Phone: +123 456 7890</p>
         </section>
     </main>
 
-    <!-- 푸터 섹션 -->
-    <footer>
-        <p>&copy; 2025 My Awesome Website | Designed by You</p>
-    </footer>
+    <!-- 스크립트 -->
+    <script src="scripts.js"></script>
 </body>
 </html>
