@@ -1,18 +1,86 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+/* 기본 스타일 초기화 */
+body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
-h1 {
+/* 본문 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 헤더 스타일 */
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    padding: 10px 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* 메인 콘텐츠 스타일 */
+main {
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 1.8rem;
     color: #007BFF;
-    text-align: center;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-p {
+main p, main ul {
+    margin-bottom: 20px;
+}
+
+main ul li {
+    background: #eee;
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 5px solid #007BFF;
+}
+
+/* 푸터 스타일 */
+footer {
+    background: #333;
+    color: white;
     text-align: center;
-    font-size: 18px;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
