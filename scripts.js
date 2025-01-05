@@ -1,9 +1,12 @@
-function showSection(sectionId) {
-    // 모든 섹션 숨기기
-    const sections = document.querySelectorAll('.content');
-    sections.forEach(section => section.classList.remove('active'));
+function toggleDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    const isVisible = dropdown.style.display === 'block';
+    
+    // 모든 드롭다운 메뉴 숨기기
+    document.querySelectorAll('.dropdown-content').forEach(menu => {
+        menu.style.display = 'none';
+    });
 
-    // 선택된 섹션만 활성화
-    const activeSection = document.getElementById(sectionId);
-    activeSection.classList.add('active');
+    // 클릭한 드롭다운만 토글
+    dropdown.style.display = isVisible ? 'none' : 'block';
 }
