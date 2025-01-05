@@ -7,90 +7,97 @@ body, h1, h2, p, ul, li, a {
     font-family: 'Arial', sans-serif;
 }
 
-/* 전체 페이지 배경 그라데이션 */
+/* 본문 스타일 */
 body {
-    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    background: #f4f4f4;
     color: #333;
-    padding: 0;
-    margin: 0;
 }
 
 /* 헤더 스타일 */
 header {
-    background: rgba(0, 0, 0, 0.6);
+    background: #007bff;
     color: white;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
-/* 섹션 링크 */
+/* 네비게이션 스타일 */
 .section-links {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-around;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .section-links a {
-    color: #007bff;
-    font-weight: bold;
+    margin: 0 15px;
     font-size: 1.2rem;
-    transition: color 0.3s;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .section-links a:hover {
     color: #ff4081;
 }
 
-/* 섹션별 스타일 */
-section {
-    padding: 60px 20px;
-    margin: 20px 0;
-    color: white;
+/* 섹션 스타일 */
+.content {
+    display: none; /* 기본적으로 숨김 */
+    padding: 40px;
+    margin: 20px auto;
+    width: 80%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Home 섹션 */
-.section-home {
+/* 섹션별 배경색 */
+#home {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
 
-/* About 섹션 */
-.section-about {
+#about {
     background: linear-gradient(135deg, #a18cd1, #fbc2eb);
 }
 
-/* Services 섹션 */
-.section-services {
+#services {
     background: linear-gradient(135deg, #84fab0, #8fd3f4);
 }
 
-/* Contact Us 섹션 */
-.section-contact {
+#contact {
     background: linear-gradient(135deg, #f6d365, #fda085);
 }
 
-/* 중간 빈 공간 */
-.spacer {
-    height: 100px;
-    background: transparent;
+/* 활성화된 섹션 */
+.content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .section-links {
         flex-direction: column;
-        text-align: center;
     }
 
-    section {
-        padding: 40px 10px;
+    .section-links a {
+        display: block;
+        margin: 10px 0;
     }
 }
