@@ -1,5 +1,5 @@
 /* 기본 초기화 */
-body, h1, h2, p, ul, li, a {
+body, h1, p, ul, li, a {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -7,17 +7,19 @@ body, h1, h2, p, ul, li, a {
     font-family: 'Arial', sans-serif;
 }
 
-/* 헤더 스타일 */
+/* 투명 헤더 스타일 */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #007bff;
-    padding: 10px 20px;
-    color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* 투명 배경 */
     z-index: 1000;
+    color: white;
 }
 
 .logo img {
@@ -26,7 +28,7 @@ header {
 
 nav ul {
     display: flex;
-    gap: 30px; /* 각 링크 간 자간 설정 */
+    gap: 30px; /* 링크 간 간격 */
 }
 
 nav ul li {
@@ -36,7 +38,7 @@ nav ul li {
 nav ul li a {
     color: white;
     font-weight: bold;
-    padding: 15px 20px; /* 링크 박스 간격 조정 */
+    padding: 15px 20px;
     transition: background 0.3s;
 }
 
@@ -71,16 +73,62 @@ nav ul li a:hover {
     color: white;
 }
 
-/* 비디오 컨테이너 */
-.video-container {
+/* 배경 애니메이션 */
+.animated-background {
+    position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    position: relative;
+    z-index: -1; /* 헤더 뒤로 배치 */
 }
 
-video {
+.animated-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: url('image1.jpg') center/cover no-repeat;
+    animation: slide 15s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* 애니메이션 효과 */
+@keyframes slide {
+    0% {
+        background: url('image1.jpg') center/cover no-repeat;
+    }
+    33% {
+        background: url('image2.jpg') center/cover no-repeat;
+    }
+    66% {
+        background: url('image3.jpg') center/cover no-repeat;
+    }
+    100% {
+        background: url('image1.jpg') center/cover no-repeat;
+    }
+}
+
+/* 오버레이 텍스트 */
+.overlay-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.overlay-subtext {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
