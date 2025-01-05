@@ -3,51 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Web Page</title>
+    <title>Gradient & Styled Sections</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 헤더 -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#" onclick="showContent('home')">Home</a></li>
-                <li><a href="#" onclick="showContent('about')">About</a></li>
-                <li><a href="#" onclick="showContent('services')">Services</a></li>
-                <li><a href="#" onclick="showContent('contact')">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>My Gradient Website</h1>
     </header>
 
-    <!-- 메인 콘텐츠 영역 -->
-    <main>
-        <section id="home" class="content active">
-            <h1>Welcome to Home</h1>
-            <p>This is the home section. Click other tabs to explore!</p>
-        </section>
+    <!-- 섹션 링크 -->
+    <div class="section-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+    </div>
 
-        <section id="about" class="content">
-            <h1>About Us</h1>
-            <p>We are passionate about creating amazing web experiences.</p>
-        </section>
+    <!-- 섹션 콘텐츠 -->
+    <section id="home" class="section-home">
+        <h2>Welcome to Home</h2>
+        <p>Experience the beauty of gradients and styled sections!</p>
+    </section>
 
-        <section id="services" class="content">
-            <h1>Our Services</h1>
-            <ul>
-                <li>Web Design</li>
-                <li>Web Development</li>
-                <li>SEO Optimization</li>
-            </ul>
-        </section>
+    <section id="about" class="section-about">
+        <h2>About Us</h2>
+        <p>Discover more about our journey and values.</p>
+    </section>
 
-        <section id="contact" class="content">
-            <h1>Contact Us</h1>
-            <p>Email: contact@awesomeweb.com</p>
-            <p>Phone: +123 456 7890</p>
-        </section>
-    </main>
+    <section id="services" class="section-services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Creative Design</li>
+            <li>Professional Development</li>
+            <li>Marketing Strategy</li>
+        </ul>
+    </section>
 
-    <!-- 스크립트 -->
-    <script src="scripts.js"></script>
+    <!-- 중간 빈 공간 -->
+    <div class="spacer"></div>
+
+    <!-- Contact Us 섹션 -->
+    <section id="contact" class="section-contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@gradientweb.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
 </body>
 </html>
